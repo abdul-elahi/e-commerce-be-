@@ -3,6 +3,8 @@ package com.ecommerce.config;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
 
 import javax.crypto.SecretKey;
@@ -26,4 +28,10 @@ public class JWTProvider {
         String email = String.valueOf(claims.get("email"));
         return email;
     }
+
+	public JWTProvider() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
 }
